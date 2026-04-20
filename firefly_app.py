@@ -203,10 +203,6 @@ with col2:
         st.success(result["rewritten_prompt"])
         st.caption(result["explanation"])
         st.code(result["rewritten_prompt"], language=None)
-        st.code(
-            "Copy rewritten prompt",
-            result["rewritten_prompt"],
-            use_container_width=True,
         )
         st.markdown("---")
         st.subheader("Style Variations")
@@ -214,11 +210,6 @@ with col2:
             with st.expander(f"{v['style']} variation"):
                 st.write(v["prompt"])
                 st.code(v["prompt"], language=None)
-                st.code(
-                    f"Copy — {v['style']}",
-                    v["prompt"],
-                    key=f"copy_var_{i}_{v['style']}",
-                    use_container_width=True,
                 )
     elif not analyze_btn:
         st.info("Enter a prompt on the left and click Analyze to get started ")
