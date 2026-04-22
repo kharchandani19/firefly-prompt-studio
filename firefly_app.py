@@ -203,7 +203,6 @@ with col2:
         st.success(result["rewritten_prompt"])
         st.caption(result["explanation"])
         st.code(result["rewritten_prompt"], language=None)
-        )
         st.markdown("---")
         st.subheader("Style Variations")
         for i, v in enumerate(result["variations"]):
